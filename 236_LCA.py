@@ -10,9 +10,9 @@ class Solution:
             if node.right:
                 parent[node.right]=node
                 stack.append(node.right)
-        p_ancestors=[]
+        p_ancestors= set ()
         while p:
-            p_ancestors.append(p)
+            p_ancestors.add(p)
             p = parent [p]
         while q not in p_ancestors:
             q = parent [q]
